@@ -1,11 +1,33 @@
 <?php
 
+/**
+ * Enum
+ *
+ * @category   Constraint
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ */
+
 namespace Braincrafted\ValidationBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Exception\MissingOptionsException;
 
 /**
+ * Enum
+ *
+ * @category   Constraint
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ *
  * @Annotation
  */
 class Enum extends Constraint
