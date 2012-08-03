@@ -5,6 +5,17 @@ Handcrafted in Vienna by [Florian Eckerstorfer](http://florianeckerstorfer.com).
 
 [![Build Status](https://secure.travis-ci.org/florianeckerstorfer/validation-bundle.png?branch=master)](http://travis-ci.org/florianeckerstorfer/validation-bundle)
 
+Installation
+------------
+
+**BraincraftedValidationBundle** can be installed using Commposer.
+
+    {
+        "requier": {
+            "braincrafted/validation-bundle": "dev-master"
+        }
+    }
+
 Usage
 -----
 
