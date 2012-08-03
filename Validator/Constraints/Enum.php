@@ -15,7 +15,7 @@ class Enum extends Constraint
 
     public function __construct($options = null)
     {
-        if (null !== $options && !is_array($options)) {
+        if (null !== $options && is_array($options) && !isset($options['enums'])) {
             $options = array(
                 'enums'    => $options
             );
@@ -29,7 +29,7 @@ class Enum extends Constraint
     }
 
     public function validatedBy()
-{
-    return get_class($this).'Validator';
-}
+    {
+        return get_class($this).'Validator';
+    }
 }
