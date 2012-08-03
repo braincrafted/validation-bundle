@@ -3,7 +3,7 @@ BraincraftedValidationBundle
 
 Handcrafted in Vienna by [Florian Eckerstorfer](http://florianeckerstorfer.com).
 
-[![Build Status](https://secure.travis-ci.org/florianeckerstorfer/validation-bundle.png?branch=master)](http://travis-ci.org/florianeckerstorfer/validation-bundle)
+[![Build Status](https://secure.travis-ci.org/braincrafted/validation-bundle.png?branch=master)](http://travis-ci.org/braincrafted/validation-bundle)
 
 Installation
 ------------
@@ -11,7 +11,7 @@ Installation
 **BraincraftedValidationBundle** can be installed using Commposer.
 
     {
-        "requier": {
+        "requiere": {
             "braincrafted/validation-bundle": "dev-master"
         }
     }
@@ -19,7 +19,7 @@ Installation
 Usage
 -----
 
-If **BraincraftedValidationBundle** has been added to the project, can be used just like every other Symfony2 validator.
+If **BraincraftedValidationBundle** has been added to the project, its validators can be used just like every other Symfony2 validator.
 
 ### Using with YAML
 
@@ -90,6 +90,14 @@ If **BraincraftedValidationBundle** has been added to the project, can be used j
         }
     }
 
+Available Validators
+--------------------
+
+### Enum
+
+- Options:
+    - `string` message
+    - `array` allowedValues
 
 License
 --------
