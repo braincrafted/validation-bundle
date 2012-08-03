@@ -1,0 +1,23 @@
+{
+    "name":         "braincrafted/validation-bundle",
+    "version":      "1.0.0-dev",
+    "description":  "Validators for Symfony2",
+    "keywords":     ["validation"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authorsa":     [
+        {
+            "name":     "Florian Eckerstorfer",
+            "email":    "florian@theroadtojoy.at",
+            "homepage": "http://florianeckerstorfer.com"
+        }
+    ],
+    "require":      {
+        "php":                  ">=5.3.3",
+        "symfony/validator":    "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Braincrafted\\ValidationBundle": "" }
+    },
+    "target-dir": "Braincrafted/ValidationBundle"
+}

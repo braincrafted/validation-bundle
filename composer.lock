@@ -1,0 +1,25 @@
+{
+    "hash": "7f0ec1e056eb0ca88ff2edf7ec45a3b2",
+    "packages": [
+        {
+            "package": "symfony/validator",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/validator",
+            "version": "dev-master",
+            "source-reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
+            "commit-date": "1343985071"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "symfony/validator": 20
+    }
+}
