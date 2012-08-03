@@ -11,20 +11,21 @@ use Symfony\Component\Validator\Exception\MissingOptionsException;
 class Enum extends Constraint
 {
     public $message = 'This value must be one of {{ enums }}.';
-    public $enums;
+    public $allowedValues;
 
     public function __construct($options = null)
     {
-        if (null !== $options && is_array($options) && !isset($options['enums'])) {
-            $options = array(
-                'enums'    => $options
-            );
+        if (null !== $options && is_array($options) && !isset($options['allowedValues'])) {
+            $options = array('allowedValues' => $options);
         }
 
         parent::__construct($options);
 
-        if (null === $this->enums) {
-            throw new MissingOptionsException('The option "enums" must be given for constraint ' . __CLASS__, array('enums'));
+        if (null === $this->allowedValues) {
+            throw new MissingOptionsException(
+                sprintf('The option "allowedValues" must be given for constraint %s.', __CLASS__),
+                array('allowedValues')
+            );
         }
     }
 

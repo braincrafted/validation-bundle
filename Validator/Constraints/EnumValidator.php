@@ -23,11 +23,11 @@ class EnumValidator extends ConstraintValidator
 
         $stringValue = (string) $value;
 
-        if (!in_array($stringValue, $constraint->enums)) {
+        if (!in_array($stringValue, $constraint->allowedValues)) {
             $this->context->addViolation($constraint->message, array(
-                '{{ value }}'   => $stringValue,
-                '{{ enums }}'   => implode(', ', $constraint->enums)
-            ), $value, $constraint->enums);
+                '{{ value }}'           => $stringValue,
+                '{{ allowedValues }}'   => implode(', ', $constraint->allowedValues)
+            ), $value, $constraint->allowedValues);
         }
     }
 }
