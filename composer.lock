@@ -1,17 +1,66 @@
 {
-    "hash": "7f0ec1e056eb0ca88ff2edf7ec45a3b2",
+    "hash": "46d447ba65cd7a6f0ec615c4ca454913",
     "packages": [
         {
-            "package": "symfony/validator",
+            "name": "symfony/validator",
             "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/validator",
-            "version": "dev-master",
-            "source-reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
-            "commit-date": "1343985071"
+            "target-dir": "Symfony/Component/Validator",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Validator",
+                "reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Validator/zipball/a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
+                "reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/http-foundation": "2.1.*",
+                "symfony/locale": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "symfony/http-foundation": "dev-master",
+                "symfony/yaml": "dev-master",
+                "doctrine/common": ">=2.1,<2.4-dev"
+            },
+            "time": "1343985071",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Validator": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": null,
+                    "role": null
+                },
+                {
+                    "name": "Symfony Community",
+                    "email": null,
+                    "homepage": "http://symfony.com/contributors",
+                    "role": null
+                }
+            ],
+            "description": "Symfony Validator Component",
+            "homepage": "http://symfony.com"
         }
     ],
     "packages-dev": null,
@@ -19,7 +68,7 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "symfony/validator": 20
-    }
+    "stability-flags": [
+
+    ]
 }
