@@ -1,11 +1,34 @@
 <?php
 
+/**
+ * EnumValidator
+ *
+ * @category   Validator
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ */
+
 namespace Braincrafted\ValidationBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
+/**
+ * EnumValidator
+ *
+ * @category   Validator
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ */
 class EnumValidator extends ConstraintValidator
 {
     /**
@@ -23,11 +46,11 @@ class EnumValidator extends ConstraintValidator
 
         $stringValue = (string) $value;
 
-        if (!in_array($stringValue, $constraint->enums)) {
+        if (!in_array($stringValue, $constraint->allowedValues)) {
             $this->context->addViolation($constraint->message, array(
-                '{{ value }}'   => $stringValue,
-                '{{ enums }}'   => implode(', ', $constraint->enums)
-            ), $value, $constraint->enums);
+                '{{ value }}'           => $stringValue,
+                '{{ allowedValues }}'   => implode(', ', $constraint->allowedValues)
+            ), $value, $constraint->allowedValues);
         }
     }
 }

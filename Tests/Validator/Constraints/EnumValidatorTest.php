@@ -1,10 +1,33 @@
 <?php
 
+/**
+ * EnumValidatorTest
+ *
+ * @category   Test
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ */
+
 namespace Braincrafted\ValidationBundle\Tests\Validator\Constraints;
 
 use Braincrafted\ValidationBundle\Validator\Constraints\Enum;
 use Braincrafted\ValidationBundle\Validator\Constraints\EnumValidator;
 
+/**
+ * EnumValidatorTest
+ *
+ * @category   Test
+ * @package    BraincraftedValidationBundle
+ * @subpackage Validator
+ * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
+ * @copyright  2012 Florian Eckerstorfer
+ * @license    http://opensource.org/licenses/MIT The MIT License
+ * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
+ */
 class EnumValidatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $context;
@@ -59,14 +82,14 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
     public function testInvalidEnums()
     {
         $constraint = new Enum(array(
-            'enums'     => array('foo', 'bar'),
-            'message'   => 'myMessage'
+            'allowedValues' => array('foo', 'bar'),
+            'message'       => 'myMessage'
         ));
         $this->context->expects($this->once())
             ->method('addViolation')
             ->with('myMessage', $this->identicalTo(array(
-                '{{ value }}'   => 'foobar',
-                '{{ enums }}'   => 'foo, bar'
+                '{{ value }}'           => 'foobar',
+                '{{ allowedValues }}'   => 'foo, bar'
             )), $this->identicalTo('foobar'), array('foo', 'bar'));
 
         $this->validator->validate('foobar', $constraint);
@@ -76,6 +99,6 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $constraint = new Enum(array('foo'));
 
-        $this->assertEquals(array('foo'), $constraint->enums);
+        $this->assertEquals(array('foo'), $constraint->allowedValues);
     }
 }

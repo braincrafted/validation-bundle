@@ -1,6 +1,6 @@
 {
     "name":         "braincrafted/validation-bundle",
-    "version":      "0.0.1-alpha1",
+    "version":      "1.0.0-dev",
     "description":  "Validators for Symfony2",
     "keywords":     ["validation"],
     "type":         "symfony-bundle",
