@@ -14,7 +14,7 @@
     ],
     "require":      {
         "php":                  ">=5.3.3",
-        "symfony/validator":    "v2.1.2"
+        "symfony/validator":    "2.1.*"
     },
     "autoload": {
         "psr-0": { "Braincrafted\\ValidationBundle": "" }
