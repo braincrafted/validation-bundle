@@ -1,19 +1,19 @@
 {
-    "hash": "46d447ba65cd7a6f0ec615c4ca454913",
+    "hash": "f42aaaa9ad722e6ecd413d6b6ff77cbe",
     "packages": [
         {
             "name": "symfony/validator",
-            "version": "dev-master",
+            "version": "v2.1.2",
             "target-dir": "Symfony/Component/Validator",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Validator",
-                "reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8"
+                "reference": "v2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Validator/zipball/a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
-                "reference": "a26ddec9872f4acef6c3ec50f024ff3a8c3ec6e8",
+                "url": "https://github.com/symfony/Validator/zipball/v2.1.2",
+                "reference": "v2.1.2",
                 "shasum": ""
             },
             "require": {
@@ -25,18 +25,18 @@
                 "symfony/yaml": "2.1.*"
             },
             "suggest": {
-                "symfony/http-foundation": "dev-master",
-                "symfony/yaml": "dev-master",
-                "doctrine/common": ">=2.1,<2.4-dev"
+                "doctrine/common": ">=2.1,<2.4-dev",
+                "symfony/http-foundation": "2.1.*",
+                "symfony/yaml": "2.1.*"
             },
-            "time": "1343985071",
+            "time": "2012-09-17 17:45:59",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.1-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Validator": ""
@@ -48,15 +48,11 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": null,
-                    "role": null
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
-                    "email": null,
-                    "homepage": "http://symfony.com/contributors",
-                    "role": null
+                    "homepage": "http://symfony.com/contributors"
                 }
             ],
             "description": "Symfony Validator Component",
