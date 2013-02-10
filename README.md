@@ -11,7 +11,7 @@ Installation
 **BraincraftedValidationBundle** can be installed using Commposer.
 
     {
-        "requiere": {
+        "require": {
             "braincrafted/validation-bundle": "dev-master"
         }
     }
