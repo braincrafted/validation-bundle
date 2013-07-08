@@ -1,6 +1,5 @@
 {
     "name":         "braincrafted/validation-bundle",
-    "version":      "1.0.0-dev",
     "description":  "Validators for Symfony2",
     "keywords":     ["validation"],
     "type":         "symfony-bundle",
@@ -14,7 +13,7 @@
     ],
     "require":      {
         "php":                  ">=5.3.3",
-        "symfony/validator":    "2.1.*"
+        "symfony/validator":    "2.3.*"
     },
     "autoload": {
         "psr-0": { "Braincrafted\\ValidationBundle": "" }
