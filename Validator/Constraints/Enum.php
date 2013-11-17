@@ -18,9 +18,17 @@ use Symfony\Component\Validator\Exception\MissingOptionsException;
  */
 class Enum extends Constraint
 {
+    /** @var string */
     public $message = 'This value must be one of {{ enums }}.';
+
+    /** @var array */
     public $allowedValues;
 
+    /**
+     * @param array $options Options
+     *
+     * @throw MissingOptionsException when the allowedValues option is missing
+     */
     public function __construct($options = null)
     {
         if (null !== $options && is_array($options) && !isset($options['allowedValues'])) {
@@ -37,6 +45,9 @@ class Enum extends Constraint
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function validatedBy()
     {
         return get_class($this).'Validator';

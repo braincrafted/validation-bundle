@@ -1,6 +1,7 @@
 /build/
 /composer.lock
 /phpunit.xml
+/Resources/docs/code-coverage/
 /vendor/
 *.sublime-project
 *.sublime-workspace

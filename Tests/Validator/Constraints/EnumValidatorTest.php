@@ -33,6 +33,10 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator = null;
     }
 
+    /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
+     */
     public function testNullIsValid()
     {
         $this->context->expects($this->never())
@@ -41,6 +45,10 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator->validate(null, new Enum(array('foo', 'bar')));
     }
 
+    /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
+     */
     public function testEmptyStringIsValid()
     {
         $this->context->expects($this->never())
@@ -50,6 +58,8 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
      * @expectedException Symfony\Component\Validator\Exception\UnexpectedTypeException
      */
     public function testExpectsStringCompatibleType()
@@ -57,6 +67,10 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator->validate(new \stdClass(), new Enum(array('foo', 'bar')));
     }
 
+    /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
+     */
     public function testValidEnums()
     {
         $this->context->expects($this->never())
@@ -66,6 +80,10 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator->validate('foo', $constraint);
     }
 
+    /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
+     */
     public function testInvalidEnums()
     {
         $constraint = new Enum(array(
@@ -82,6 +100,10 @@ class EnumValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator->validate('foobar', $constraint);
     }
 
+    /**
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\EnumValidator::validate()
+     * @covers Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum::__construct()
+     */
     public function testConstraintGetDefaultOption()
     {
         $constraint = new Enum(array('foo'));

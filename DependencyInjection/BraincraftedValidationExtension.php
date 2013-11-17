@@ -15,6 +15,8 @@ use Symfony\Component\DependencyInjection\Loader;
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2103 Florian Eckerstorfer
  * @license    http://opensource.org/licenses/MIT The MIT License
+ *
+ * @codeCoverageIgnore
  */
 
 class BraincraftedValidationExtension extends Extension
