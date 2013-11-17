@@ -1,18 +1,6 @@
 <?php
 
-/**
- * EnumValidator
- *
- * @category   Validator
- * @package    BraincraftedValidationBundle
- * @subpackage Validator
- * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
- * @copyright  2012 Florian Eckerstorfer
- * @license    http://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
- */
-
-namespace Braincrafted\ValidationBundle\Validator\Constraints;
+namespace Braincrafted\Bundle\ValidationBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
@@ -21,13 +9,11 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 /**
  * EnumValidator
  *
- * @category   Validator
  * @package    BraincraftedValidationBundle
  * @subpackage Validator
- * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
- * @copyright  2012 Florian Eckerstorfer
+ * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
+ * @copyright  2012-2013 Florian Eckerstorfer
  * @license    http://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
  */
 class EnumValidator extends ConstraintValidator
 {

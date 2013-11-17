@@ -1,19 +1,6 @@
 <?php
 
-/**
- * Configuration
- *
- * @category   Configuration
- * @package    BraincraftedValidationBundle
- * @subpackage DependencyInjection
- * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
- * @copyright  2012 Florian Eckerstorfer
- * @license    http://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
- */
-
-
-namespace Braincrafted\ValidationBundle\DependencyInjection;
+namespace Braincrafted\Bundle\ValidationBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -21,13 +8,11 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * Configuration
  *
- * @category   Configuration
  * @package    BraincraftedValidationBundle
  * @subpackage DependencyInjection
- * @author     Florian Eckerstorfer <florian@theroadtojoy.at>
- * @copyright  2012 Florian Eckerstorfer
+ * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
+ * @copyright  2012-2103 Florian Eckerstorfer
  * @license    http://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/braincrafted/validation-bundle BraincraftedValidationBundle on GitHub
  */
 class Configuration implements ConfigurationInterface
 {

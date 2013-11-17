@@ -7,16 +7,19 @@
     "authorsa":     [
         {
             "name":     "Florian Eckerstorfer",
-            "email":    "florian@theroadtojoy.at",
-            "homepage": "http://florianeckerstorfer.com"
+            "email":    "florian@eckerstorfer.co",
+            "homepage": "http://florian.ec"
         }
     ],
     "require":      {
         "php":                  ">=5.3.3",
         "symfony/validator":    "2.3.*"
     },
-    "autoload": {
-        "psr-0": { "Braincrafted\\ValidationBundle": "" }
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
     },
-    "target-dir": "Braincrafted/ValidationBundle"
+    "autoload": {
+        "psr-0": { "Braincrafted\\Bundle\\ValidationBundle": "" }
+    },
+    "target-dir": "Braincrafted/Bundle/≤ValidationBundle"
 }
