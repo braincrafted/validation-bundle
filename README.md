@@ -5,6 +5,7 @@ Handcrafted in Vienna by [Florian Eckerstorfer](http://florianeckerstorfer.com).
 
 [![Build Status](https://secure.travis-ci.org/braincrafted/validation-bundle.png?branch=master)](http://travis-ci.org/braincrafted/validation-bundle)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/braincrafted/validation-bundle/badges/quality-score.png?s=6d50a21a93c38fe1a2a6527eaaa64079dac394c5)](https://scrutinizer-ci.com/g/braincrafted/validation-bundle/)
+[![Code Coverage](https://scrutinizer-ci.com/g/braincrafted/validation-bundle/badges/coverage.png?s=50b60e54bc0691301748390e8c7e74636ed1bf53)](https://scrutinizer-ci.com/g/braincrafted/validation-bundle/)
 
 
 Installation
