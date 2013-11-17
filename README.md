@@ -5,6 +5,7 @@ Handcrafted in Vienna by [Florian Eckerstorfer](http://florianeckerstorfer.com).
 
 [![Build Status](https://secure.travis-ci.org/braincrafted/validation-bundle.png?branch=master)](http://travis-ci.org/braincrafted/validation-bundle)
 
+
 Installation
 ------------
 
@@ -12,9 +13,12 @@ Installation
 
     {
         "require": {
-            "braincrafted/validation-bundle": "dev-master"
+            "braincrafted/validation-bundle": "@stable"
         }
     }
+
+Replace `@stable` with the latest stable release.
+
 
 Usage
 -----
@@ -28,14 +32,14 @@ If **BraincraftedValidationBundle** has been added to the project, its validator
         properties:
             name:
                 - NotBlank: ~
-                - Braincrafted\ValidationBundle\Validator\Constraints\Enum:
+                - Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum:
                     allowedValues: ["ACTIVE", "PAUSED", "DELETED"]
 
 ### Using with Annotations
 
     // src/Acme/DemoBundle/Entity/AcmeEntity.php
     use Symfony\Component\Validator\Constraints as Assert;
-    use Braincrafted\ValidationBundle\Validator\Constraints as BraincraftedAssert;
+    use Braincrafted\Bundle\ValidationBundle\Validator\Constraints as BraincraftedAssert;
 
     class AcmeEntity
     {
@@ -61,7 +65,7 @@ If **BraincraftedValidationBundle** has been added to the project, its validator
         <class name="Acme\DemoBundle\Entity\AcmeEntity">
             <property name="name">
                 <constraint name="NotBlank" />
-                <constraint name="Braincrafted\ValidationBundle\Validator\Constraints\Enum">
+                <constraint name="Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum">
                     <option name="allowedValues">
                         <value>ACTIVE</value>
                         <value>PAUSED</value>
@@ -77,7 +81,7 @@ If **BraincraftedValidationBundle** has been added to the project, its validator
     // src/Acme/DemoBundle/Entity/AcmeEntity.php
     use Symfony\Component\Validator\Mapping\ClassMetadata;
     use Symfony\Component\Validator\Constraints\NotBlank;
-    use Braincrafted\ValidationBundle\Validator\Constraints\Enum;
+    use Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum;
 
     class AcmeEntity
     {
@@ -90,6 +94,7 @@ If **BraincraftedValidationBundle** has been added to the project, its validator
         }
     }
 
+
 Available Validators
 --------------------
 
@@ -99,12 +104,21 @@ Available Validators
     - `string` message
     - `array` allowedValues
 
+
+Changelog
+---------
+
+### Version 0.2 (17 November 2013)
+
+- Changed namespace to `Braincrafted\Bundle\ValidationBundle`
+
+
 License
 --------
 
 ### The MIT License (MIT)
 
-Copyright (c) 2012 Florian Eckerstorfer
+Copyright (c) 2012-2013 Florian Eckerstorfer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
