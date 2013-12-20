@@ -32,7 +32,7 @@ use Symfony\Component\Validator\Exception\MissingOptionsException;
  */
 class Enum extends Constraint
 {
-    public $message = 'This value must be one of {{ enums }}.';
+    public $message = 'This value must be one of {{ allowedValues }}.';
     public $allowedValues;
 
     public function __construct($options = null)
