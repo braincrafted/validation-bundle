@@ -110,6 +110,10 @@ Available Validators
 Changelog
 ---------
 
+### Version 0.3 (21 November 2013)
+
+- #6: Fixed error message [by [Tobur](https://github.com/Tobur)]
+
 ### Version 0.2 (17 November 2013)
 
 - Changed namespace to `Braincrafted\Bundle\ValidationBundle`
