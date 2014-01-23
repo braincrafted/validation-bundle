@@ -13,14 +13,15 @@ Installation
 
 **BraincraftedValidationBundle** can be installed using Commposer.
 
-    {
-        "require": {
-            "braincrafted/validation-bundle": "@stable"
-        }
+```json
+{
+    "require": {
+        "braincrafted/validation-bundle": "@stable"
     }
+}
+```
 
 Replace `@stable` with the latest stable release.
-
 
 Usage
 -----
@@ -29,73 +30,78 @@ If **BraincraftedValidationBundle** has been added to the project, its validator
 
 ### Using with YAML
 
-    # src/Acme/BlogBundle/Resources/config/validation.yml
-    Acme\DemoBundle\Entity\AcmeEntity:
-        properties:
-            name:
-                - NotBlank: ~
-                - Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum:
-                    allowedValues: ["ACTIVE", "PAUSED", "DELETED"]
+```yaml
+# src/Acme/BlogBundle/Resources/config/validation.yml
+Acme\DemoBundle\Entity\AcmeEntity:
+    properties:
+        name:
+            - NotBlank: ~
+            - Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum:
+                allowedValues: ["ACTIVE", "PAUSED", "DELETED"]
+```
 
 ### Using with Annotations
 
-    // src/Acme/DemoBundle/Entity/AcmeEntity.php
-    use Symfony\Component\Validator\Constraints as Assert;
-    use Braincrafted\Bundle\ValidationBundle\Validator\Constraints as BraincraftedAssert;
+```php
+// src/Acme/DemoBundle/Entity/AcmeEntity.php
+use Symfony\Component\Validator\Constraints as Assert;
+use Braincrafted\Bundle\ValidationBundle\Validator\Constraints as BraincraftedAssert;
 
-    class AcmeEntity
-    {
-        // ...
-
-        /**
-         * @Assert\NotBlank
-         * @BraincraftedAssert\Enum(allowedValues={"ACTIVE", "PAUSED, "DELETED""})
-         */
-        protected $status;
-
-        // ...
-    }
+class AcmeEntity
+{
+    // ...
+    /**
+     * @Assert\NotBlank
+     * @BraincraftedAssert\Enum(allowedValues={"ACTIVE", "PAUSED, "DELETED""})
+     */
+    protected $status;
+    // ...
+}
+```
 
 ### Using with XML
 
-    <!-- src/Acme/DemoBundle/Resources/config/validation.xml -->
-    <?xml version="1.0" encoding="UTF-8" ?>
-    <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+```xml
+<!-- src/Acme/DemoBundle/Resources/config/validation.xml -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
-        <class name="Acme\DemoBundle\Entity\AcmeEntity">
-            <property name="name">
-                <constraint name="NotBlank" />
-                <constraint name="Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum">
-                    <option name="allowedValues">
-                        <value>ACTIVE</value>
-                        <value>PAUSED</value>
-                        <value>DELETED</value>
-                    </option>
-                </constraint>
-            </property>
-        </class>
-    </constraint-mapping>
+    <class name="Acme\DemoBundle\Entity\AcmeEntity">
+        <property name="name">
+            <constraint name="NotBlank" />
+            <constraint name="Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum">
+                <option name="allowedValues">
+                    <value>ACTIVE</value>
+                    <value>PAUSED</value>
+                    <value>DELETED</value>
+                </option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>
+```
 
 ### Using with PHP
 
-    // src/Acme/DemoBundle/Entity/AcmeEntity.php
-    use Symfony\Component\Validator\Mapping\ClassMetadata;
-    use Symfony\Component\Validator\Constraints\NotBlank;
-    use Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum;
+```php
+// src/Acme/DemoBundle/Entity/AcmeEntity.php
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Braincrafted\Bundle\ValidationBundle\Validator\Constraints\Enum;
 
-    class AcmeEntity
+class AcmeEntity
+{
+    public $name;
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        public $name;
-
-        public static function loadValidatorMetadata(ClassMetadata $metadata)
-        {
-            $metadata->addPropertyConstraint('status', new NotBlank());
-            $metadata->addPropertyConstraint('status', new Enum(array('ACTIVE', 'PAUSED', 'DELETED')));
-        }
+        $metadata->addPropertyConstraint('status', new NotBlank());
+        $metadata->addPropertyConstraint('status', new Enum(array('ACTIVE', 'PAUSED', 'DELETED')));
     }
-
+}
+```
 
 Available Validators
 --------------------
